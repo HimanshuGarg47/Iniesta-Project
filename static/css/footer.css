@@ -1,0 +1,52 @@
+.t18{
+	position: absolute;
+	left: 100px;
+	top: 4355px;
+	line-height: 30px;
+}
+.no-bullets{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.f1{
+	font-size: 40px;
+	font-weight: 700;
+}
+.t19{
+	position: absolute;
+	left: 360px;
+	top: 4345px;
+	line-height: 53px;
+}
+.t20{
+	position: absolute;
+	left: 560px;
+	top: 4345px;
+	line-height: 53px;
+}
+.t21{
+	position: absolute;
+	left: 860px;
+	top: 4345px;
+	line-height: 53px;
+}
+.t22{
+	position: absolute;
+	left: 1100px;
+	top: 4345px;
+	line-height: 40px;
+}
+.fa {
+  padding: 7px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+.fa-facebook,.fa-twitter,.fa-instagram,.fa-linkedin {
+  background: black;
+  color: white;
+  }

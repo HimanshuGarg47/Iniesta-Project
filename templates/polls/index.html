@@ -1,0 +1,411 @@
+<!--{% load static %}-->
+<!--<html>-->
+<!--<head>-->
+<!--	<meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width,intial-scale=1" >-->
+<!--    <title>LOGO</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/logo.css' %}">-->
+<!--      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--	<div class="s1">-->
+<!--    <img src="{% static 'images/star2.png' %}">-->
+<!--	</div>-->
+<!--	<div class="rec1">-->
+<!--		<div>-->
+<!--			<a href="{% url 'index' %}" class="logo">Logo</a>-->
+<!--		</div>-->
+<!--		<div>-->
+<!--			<a href="{% url 'about' %}" class="aboutus">About Us</a>-->
+<!--		</div>-->
+<!--		<div>-->
+<!--			<a href="{% url 'service' %}" class="ourservices">Our Services</a>-->
+<!--		</div>-->
+<!--		<div>-->
+<!--			<a href="{% url 'project' %}" class="projects">Projects</a>-->
+<!--		</div>-->
+<!--		<div>-->
+<!--			<a href="{% url 'career' %}" class="career">Career</a>-->
+<!--		</div>-->
+<!--		<div>-->
+<!--			<a href="{% url 'contact' %}" class="contact">Contact</a>-->
+<!--		</div>-->
+<!--		<div class="srec1">-->
+<!--			<button onclick="Login" class="login">Login</button>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div>-->
+<!--		<text class="t1">Developing Technologies and <font color="Red"> Trust</font></text>-->
+<!--	</div>-->
+<!--	<div>-->
+<!--		<text class="t2">Several products or services within an economy are associated with information technology, including computer hardware, software, electronics, semiconductors, internet, telecom equipment, and e-commerce.</text>-->
+<!--	</div>-->
+<!--	<div>-->
+<!--		<text class="t3">Read More...</text>-->
+<!--	</div>-->
+<!--	<div>-->
+<!--    <img src="{% static 'images/1.png' %}" class="im1">-->
+
+<!--	</div>-->
+<!--	<div>-->
+<!--    <img src="{% static 'images/1.png' %}" class="im1">-->
+<!--    <img src="{% static 'images/star2.png' %}" class="s2">-->
+<!--	</div>-->
+<!--	<div>-->
+<!--    <img src="{% static 'images/2.png' %}" class="im2">-->
+<!--	</div>-->
+<!--	<div>-->
+<!--    <img src="{% static 'images/3.png' %}" class="im3">-->
+<!--	</div>-->
+<!--    <div class="rec2">-->
+<!--    	<text class="t4">Book your free consultation</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/vec2.png' %}" class="im">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <text class="t5">Website <font color="Red">Development</font> Services</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/star2.png' %}" class="s3">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t6">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/vec3.png' %}" class="l1">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/vec4.png' %}" class="l2">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/4.png' %}" class="im4">-->
+<!--    </div>-->
+<!--    <div class="rec3">-->
+<!--    	<text class="l3">See More</text>-->
+<!--      <img src="{% static 'images/vec5.png' %}" class="l4">-->
+<!--      <img src="{% static 'images/vec6.png' %}" class="l5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/5.png' %}" class="im5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t7"><font color="Red">UI</font>/UX Design Services</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t8">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>-->
+<!--    </div>-->
+<!--    <div class="rec4">-->
+<!--    	<text class="l3">See More</text>-->
+<!--      <img src="{% static 'images/vec5.png' %}" class="l4">-->
+<!--      <img src="{% static 'images/vec6.png' %}" class="l5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t9">E-<font color="Red"> Commerce</font> Services</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t10">Our state-of-the-art ECommerce Website Development practice enables you to witness an expansion of your Ecommerce platform like never before, with an even higher graph of sales.</text>-->
+<!--    </div>-->
+<!--    <div class="rec5">-->
+<!--    	<text class="l3">See More</text>-->
+<!--      <img src="{% static 'images/vec5.png' %}" class="l4">-->
+<!--      <img src="{% static 'images/vec6.png' %}" class="l5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/6.png' %}" class="im6">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/star2.png' %}" class="s4">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/7.png' %}" class="im7">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t11">Digital<font color="Red"> Marketing</font></text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t12">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>-->
+<!--    </div>-->
+<!--    <div class="rec6">-->
+<!--    	<text class="l3">See More</text>-->
+<!--      <img src="{% static 'images/vec5.png' %}" class="l4">-->
+<!--      <img src="{% static 'images/vec6.png' %}" class="l5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/vec7.png' %}" class="l6">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t13"><font color="Red">Business</font> Consultation</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<text class="t14">Our state-of-the-art ECommerce Website Development practice enables you to witness an expansion of your Ecommerce platform like never before, with an even higher graph of sales.</text>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/8.png' %}" class="im8">-->
+<!--    </div>-->
+<!--    <div class="rec7">-->
+<!--    	<text class="l3">See More</text>-->
+<!--    	<img src="{% static 'images/vec5.png' %}" class="l4">-->
+<!--      <img src="{% static 'images/vec6.png' %}" class="l5">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <img src="{% static 'images/9.png' %}" class="im9">-->
+<!--    </div>-->
+<!--    <div class="rec8">-->
+<!--    	<text class="t15">Training & Internship</text>-->
+<!--      <img src="{% static 'images/vec8.png' %}" class="l7">-->
+<!--      <img src="{% static 'images/vec9.png' %}" class="l8">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <text class="t16">Contact<font color="Red"> Us</font></text>-->
+<!--    </div>-->
+<!--    <div class="rec9">-->
+<!--      <img src="{% static 'images/10.png' %}" class="im10">-->
+<!--    </div>-->
+<!--    <div class="rec10">-->
+<!--    	<text style="align:center" class="t17">Send<font color="Red"> Queries</font> Today!</text>-->
+<!--    	<label class="lb1">Name</label><br>-->
+<!--    	<input type="text" name="Name" class="in1" size="25">-->
+<!--    	<label class="lb2">Email</label><br>-->
+<!--    	<input type="text" name="Name" class="in2" size="25">-->
+<!--    	<label class="lb3">Phone</label><br>-->
+<!--    	<input type="text" name="Name" class="in3" size="25">-->
+<!--    	<label class="lb4">Message</label><br>-->
+<!--    	<input type="text" name="Name" class="in4" size="25">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--    	<input type="submit" name="submit" value="Submit" class="rec11">-->
+<!--    </div>-->
+<!--   <div class="t18">-->
+<!--        <ul class="no-bullets">-->
+<!--            <font color="#FF495F" class="f1"><li>Contact</li><br></font>-->
+<!--            <font color="#7E7E7E" size=5px><li>Ecommerce platform</li>-->
+<!--            <li>like never before</li><br>-->
+<!--            <li>+915555555555</li><br>-->
+<!--            <font color="#FF495F" class="f1"><li>Address</li><br></font>-->
+<!--            <li>Ecommerce platform</li>-->
+<!--            <li>like never before</li></font>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="t19">-->
+<!--        <ul class="no-bullets">-->
+<!--            <font color="#FF495F" class="f1"><li>Menu</li></font>-->
+<!--            <font color="#7E7E7E" size=5px><li>Home</li>-->
+<!--            <li>About Us</li>-->
+<!--            <li>Our Service</li>-->
+<!--            <li>Clients</li>-->
+<!--            <li>Project</li>-->
+<!--            <li>Career</li>-->
+<!--            <li>Contact</li></font>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="t20">-->
+<!--        <ul class="no-bullets">-->
+<!--            <font color="#FF495F" class="f1"><li>Services</li></font>-->
+<!--            <font color="#7E7E7E" size=5px><li>Web Developments</li>-->
+<!--            <li>Mobile App Development</li>-->
+<!--            <li>UI/UX Design</li>-->
+<!--            <li>Ecommerce</li>-->
+<!--            <li>Digital Marketing</li>-->
+<!--            <li>Business Consultation</li>-->
+<!--            <li>Training & Internship</li></font>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="t21">-->
+<!--        <ul class="no-bullets">-->
+<!--            <font color="#FF495F" class="f1"><li>About</li></font>-->
+<!--            <font color="#7E7E7E" size=5px><li>Who we are</li>-->
+<!--            <li>Our Vision</li></font>-->
+<!--        </ul>-->
+<!--          </div>-->
+<!--  <div class="t22">-->
+<!--            <font color="#FF495F" class="f1">Follow us</font><br><br>-->
+<!--            <font size=6px><a href="#" class="fa fa-facebook"></a>&nbsp&nbsp-->
+<!--            <a href="#" class="fa fa-twitter"></a>&nbsp&nbsp-->
+<!--            <a href="#" class="fa fa-instagram"></a><br><br>-->
+<!--            <a href="#" class="fa fa-linkedin"></a></font>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+{% include 'polls/footer.html'%}
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1" >
+    <title>LOGO</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logo.css' %}">
+</head>
+<body>
+	<div class="s1">
+    <img src="{% static 'images/star2.png' %}">
+	</div>
+	<div class="rec1">
+		<div>
+			<a href="{% url 'index' %}" class="logo">Logo</a>
+		</div>
+		<div>
+			<a href="{% url 'about' %}" class="aboutus">About Us</a>
+		</div>
+		<div>
+			<a href="{% url 'service' %}" class="ourservices">Our Services</a>
+		</div>
+		<div>
+			<a href="{% url 'project' %}" class="projects">Projects</a>
+		</div>
+		<div>
+			<a href="{% url 'career' %}" class="career">Career</a>
+		</div>
+		<div>
+			<a href="{% url 'contact' %}" class="contact">Contact</a>
+		</div>
+		<div class="srec1">
+			<button onclick="Login" class="login">Login</button>
+		</div>
+	</div>
+	<div>
+		<text class="t1">Developing Technologies and <font color="Red"> Trust</font></text>
+	</div>
+	<div>
+		<text class="t2">Several products or services within an economy are associated with information technology, including computer hardware, software, electronics, semiconductors, internet, telecom equipment, and e-commerce.</text>
+	</div>
+	<div>
+		<text class="t3">Read More...</text>
+	</div>
+	<div>
+    <img src="{% static 'images/1.png' %}" class="im1">
+
+	</div>
+	<div>
+    <img src="{% static 'images/1.png' %}" class="im1">
+    <img src="{% static 'images/star2.png' %}" class="s2">
+	</div>
+	<div>
+    <img src="{% static 'images/2.png' %}" class="im2">
+	</div>
+	<div>
+    <img src="{% static 'images/3.png' %}" class="im3">
+	</div>
+    <div class="rec2">
+    	<text class="t4">Book your free consultation</text>
+    </div>
+    <div>
+      <img src="{% static 'images/vec2.png' %}" class="im">
+    </div>
+    <div>
+        <text class="t5">Website <font color="Red">Development</font> Services</text>
+    </div>
+    <div>
+      <img src="{% static 'images/star2.png' %}" class="s3">
+    </div>
+    <div>
+    	<text class="t6">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>
+    </div>
+    <div>
+      <img src="{% static 'images/vec3.png' %}" class="l1">
+    </div>
+    <div>
+      <img src="{% static 'images/vec4.png' %}" class="l2">
+    </div>
+    <div>
+      <img src="{% static 'images/4.png' %}" class="im4">
+    </div>
+    <div class="rec3">
+    	<text class="l3">See More</text>
+      <img src="{% static 'images/vec5.png' %}" class="l4">
+      <img src="{% static 'images/vec6.png' %}" class="l5">
+    </div>
+    <div>
+      <img src="{% static 'images/5.png' %}" class="im5">
+    </div>
+    <div>
+    	<text class="t7"><font color="Red">UI</font>/UX Design Services</text>
+    </div>
+    <div>
+    	<text class="t8">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>
+    </div>
+    <div class="rec4">
+    	<text class="l3">See More</text>
+      <img src="{% static 'images/vec5.png' %}" class="l4">
+      <img src="{% static 'images/vec6.png' %}" class="l5">
+    </div>
+    <div>
+    	<text class="t9">E-<font color="Red"> Commerce</font> Services</text>
+    </div>
+    <div>
+    	<text class="t10">Our state-of-the-art ECommerce Website Development practice enables you to witness an expansion of your Ecommerce platform like never before, with an even higher graph of sales.</text>
+    </div>
+    <div class="rec5">
+    	<text class="l3">See More</text>
+      <img src="{% static 'images/vec5.png' %}" class="l4">
+      <img src="{% static 'images/vec6.png' %}" class="l5">
+    </div>
+    <div>
+      <img src="{% static 'images/6.png' %}" class="im6">
+    </div>
+    <div>
+      <img src="{% static 'images/star2.png' %}" class="s4">
+    </div>
+    <div>
+      <img src="{% static 'images/7.png' %}" class="im7">
+    </div>
+    <div>
+    	<text class="t11">Digital<font color="Red"> Marketing</font></text>
+    </div>
+    <div>
+    	<text class="t12">We are a one-stop-shop for all website development services. By using cutting-edge technologies our in-house team of developers delivers intuitive and highly agile websites. By keeping your vision in focus we bring out a digital transformation for your business that helps you further broaden your growth. We cover all types of web development solutions from creating plain text pages to complex web-based applications, social network applications, and electronic business applications.</text>
+    </div>
+    <div class="rec6">
+    	<text class="l3">See More</text>
+      <img src="{% static 'images/vec5.png' %}" class="l4">
+      <img src="{% static 'images/vec6.png' %}" class="l5">
+    </div>
+    <div>
+      <img src="{% static 'images/vec7.png' %}" class="l6">
+    </div>
+    <div>
+    	<text class="t13"><font color="Red">Business</font> Consultation</text>
+    </div>
+    <div>
+    	<text class="t14">Our state-of-the-art ECommerce Website Development practice enables you to witness an expansion of your Ecommerce platform like never before, with an even higher graph of sales.</text>
+    </div>
+    <div>
+      <img src="{% static 'images/8.png' %}" class="im8">
+    </div>
+    <div class="rec7">
+    	<text class="l3">See More</text>
+    	<img src="{% static 'images/vec5.png' %}" class="l4">
+      <img src="{% static 'images/vec6.png' %}" class="l5">
+    </div>
+    <div>
+      <img src="{% static 'images/9.png' %}" class="im9">
+    </div>
+    <div class="rec8">
+    	<text class="t15">Training & Internship</text>
+      <img src="{% static 'images/vec8.png' %}" class="l7">
+      <img src="{% static 'images/vec9.png' %}" class="l8">
+    </div>
+    <div>
+        <text class="t16">Contact<font color="Red"> Us</font></text>
+    </div>
+    <div class="rec9">
+      <img src="{% static 'images/10.png' %}" class="im10">
+    </div>
+    <div class="rec10">
+    	<text style="align:center" class="t17">Send<font color="Red"> Queries</font> Today!</text>
+    	<label class="lb1">Name</label><br>
+    	<input type="text" name="Name" class="in1" size="25">
+    	<label class="lb2">Email</label><br>
+    	<input type="text" name="Name" class="in2" size="25">
+    	<label class="lb3">Phone</label><br>
+    	<input type="text" name="Name" class="in3" size="25">
+    	<label class="lb4">Message</label><br>
+    	<input type="text" name="Name" class="in4" size="25">
+    </div>
+    <div>
+    	<input type="submit" name="submit" value="Submit" class="rec11">
+    </div>
+</body>
+</html>
