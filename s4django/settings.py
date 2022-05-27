@@ -58,7 +58,9 @@ ROOT_URLCONF = 's4django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,os.path.join('templates')],
+        'DIRS': [
+            BASE_DIR,os.path.join('templates')
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,9 +125,9 @@ AUTH_USER_MODEL = 'staff.Employee'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-  BASE_DIR / "static",
+    os.path.join(BASE_DIR ,'static')
 ]
-STATIC_ROOT = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR , 'assests')        #"/static/"
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/files/"

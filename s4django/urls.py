@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+# The admin now has a sidebar on larger screens for easier navigation. It is enabled by default but can be disabled by using a custom AdminSite and setting AdminSite.enable_nav_sidebar to False.
+admin.autodiscover()
+admin.site.enable_nav_sidebar = False
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('polls.urls')),
     path('employee/', include('staff.urls')),
     
-]  #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
