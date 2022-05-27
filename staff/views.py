@@ -10,5 +10,5 @@ def home(request):
 class createProfile(CreateView):
     model = Employee
     # template_name_ = 'staff/profile.html'
-    # fields = '__all__'
+    fields = '__all__'
 
