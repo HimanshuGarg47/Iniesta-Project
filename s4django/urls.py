@@ -22,4 +22,4 @@ urlpatterns = [
     path('',include('polls.urls')),
     path('employee/', include('staff.urls')),
     
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
