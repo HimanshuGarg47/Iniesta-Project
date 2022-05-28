@@ -60,18 +60,7 @@ class Employee(AbstractUser):
         
         
     def __str__(self):
-        return self.email
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-   
+        return str(self.first_name + " " + self.last_name) 
         
     
 class Task(models.Model):
@@ -81,13 +70,23 @@ class Task(models.Model):
     due_date = models.DateField(null = True)
     employee_assigned = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     
+    def __str__(self):
+        return self.name
+    
     
 class Team(models.Model):
+    
     employees = models.ManyToManyField(Employee)
+    
+    def __str__(self):
+        return self.id
+    
     
     def __init__(self, *args, **kwargs):
         self.project = models.ManyToManyField(Project)
         super().__init__(*args, **kwargs)
+        
+        
 
 class Project(models.Model):
     name  = models.CharField(max_length=50, null = True)
@@ -96,3 +95,6 @@ class Project(models.Model):
     due_date = models.DateField(null = True)
     team = models.ForeignKey(Team , null = True , on_delete=models.SET_NULL)
     
+    
+    def __str__(self):
+        return self.name

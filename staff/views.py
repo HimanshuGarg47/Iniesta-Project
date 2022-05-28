@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'staff/dashboard.html' , {})
 
 
-def project(request):
+def projects(request):
     return render(request , 'staff/project.html' , {})
 
 def team(request):

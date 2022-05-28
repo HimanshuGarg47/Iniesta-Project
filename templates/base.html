@@ -42,25 +42,25 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="dashboard.html">
+                        <a class="nav-link" href="{% url 'staff:home' %}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{% url 'profile' %}">
+                        <a class="nav-link" href="{% url 'staff:profile' %}">
                             <i class="nc-icon nc-circle-09"></i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./table.html">
+                        <a class="nav-link" href="{% url 'staff:projects' %}">
                             <i class="nc-icon nc-notes"></i>
                             <p>Projects</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./typography.html">
+                        <a class="nav-link" href="{% url 'staff:team' %}">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>Team</p>
                         </a>
@@ -147,4 +147,7 @@
         </div>
         </div>
         </body>
+        {% block after_body %}
+          
+        {% endblock after_body %}
         </html>

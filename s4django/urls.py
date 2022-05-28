@@ -24,6 +24,6 @@ admin.site.enable_nav_sidebar = False
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('polls.urls')),
-    path('employee/', include('staff.urls')),
+    path('employee/', include(('staff.urls', 'staff') , namespace='staff')),
     
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
