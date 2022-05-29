@@ -4,14 +4,23 @@
 {% endblock title %}
 
 {% block css_files %}
+<style>
+.user {
+    {% comment %} width: 150px;
+    height: 150px; {% endcomment %}
   
+    {% comment %} background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; {% endcomment %}
+  }
+</style>
 {% endblock css_files %}
 
 {% block body %}
 <div class="tab-content">
     <!-- About Tab -->
     <div role="tabpanel" class="tab-pane active" id="about">
-        <img src="{{ employee.image.url }}" alt="{{ employee.first_name }}" />
+        <img class="rounded rounded-circle my-3 d-block user" src="{{ employee.image.url }}" alt="{{ employee.first_name }}" />
 
         <div class="card pmd-card">
             <div class="card-body">

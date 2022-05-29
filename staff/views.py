@@ -35,6 +35,7 @@ def team(request):
 
 def employee_detail(request, id):
     employee = Employee.objects.get(id = id)
+    print(employee.image.url)
     context = {
         "employee":employee
     }
