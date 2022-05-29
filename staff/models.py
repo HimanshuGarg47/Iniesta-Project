@@ -12,14 +12,18 @@ from .managers import CustomUserManager
 # Create your models here.
 # from multiselectfield import MultiSelectField
 
-
+# class Department(models.Model):
+#     name = models.CharField(max_length=30)
+#     employees = models.ManyToManyField('Employee' , blank=True, null=True)
+    
+    
 class Address(models.Model):
     address_line1 = models.CharField(_("address"), max_length=128)
     address_line2 = models.CharField(_("address2"), max_length=128, blank=True)
     city = models.CharField(_("city"), max_length=64, default="Zanesville")
     state = models.CharField(max_length=100, null=True)
     country = models.CharField("Country", max_length=50, null=True) 
-    zip_code = models.CharField(_("zip code"), max_length=5, default="43701")
+    zip_code = models.CharField(_("zip code"), max_length=7, default="43701")
     
     def __str__(self):
         return self.address_line1
@@ -51,7 +55,7 @@ class Employee(AbstractUser):
     department = models.IntegerField(choices=department_choices, default=0)
     credit_score = models.IntegerField(validators=[MinValueValidator(0),
                                   MaxValueValidator(100)] , default=0)
-    address = models.OneToOneField(Address, on_delete=models.SET_NULL, null=True)
+    address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True)
     objects = CustomUserManager()
     # address = None
     # def __init__(self , *args, **kwargs):
@@ -60,7 +64,7 @@ class Employee(AbstractUser):
         
         
     def __str__(self):
-        return str(self.first_name + " " + self.last_name) 
+        return str(self.email) 
         
     
 class Task(models.Model):
@@ -78,13 +82,14 @@ class Team(models.Model):
     
     employees = models.ManyToManyField(Employee)
     
-    def __str__(self):
-        return self.id
-    
-    
     def __init__(self, *args, **kwargs):
         self.project = models.ManyToManyField(Project)
         super().__init__(*args, **kwargs)
+        
+    def __str__(self):
+        return str(self.id)
+    
+    
         
         
 
@@ -93,7 +98,7 @@ class Project(models.Model):
     detail = models.TextField(max_length=400)
     assign_date =models.DateField(null = True)
     due_date = models.DateField(null = True)
-    team = models.ForeignKey(Team , null = True , on_delete=models.SET_NULL)
+    team = models.ForeignKey(Team , blank= True , null = True , on_delete=models.SET_NULL)
     
     
     def __str__(self):

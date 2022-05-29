@@ -1,24 +1,61 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from  django.views.generic.edit import CreateView
-from .models import Employee
+from .models import Employee , Team , Project 
+# from django.views.generic.detail import DetailView
+
 # Create your views here.
 def home(request):
-    return render(request, 'staff/dashboard.html' , {})
+    return render(request, 'staff/dashboard.html' , {"active": True,})
 
 
 def projects(request):
-    return render(request , 'staff/project.html' , {})
+    projects = Project.objects.filter(team__isnull = False)
+    # not assigned projects 
+    na_projects = Project.objects.filter(team__isnull = True)
+    # print(dir(projects))
+    # print(type(projects))
+    context = {
+        "activate" : True,
+        "projects":projects,
+        "na_projects":na_projects,
+    }
+    return render(request , 'staff/project.html' , context)
 
 def team(request):
-    return render(request, 'staff/team.html', {})
+    projects = Project.objects.filter(team__isnull = False)
+    # print(dir(projects))
+    # print(type(projects))
+    context = {
+        "activate" : True,
+        "projects":projects,
+    }
+    return render(request, 'staff/team.html', context)
 
-class createProfile(CreateView):
-    model = Employee
-    # template_name_ = 'staff/profile.html'
-    fields = '__all__'
+
+def employee_detail(request, id):
+    employee = Employee.objects.get(id = id)
+    context = {
+        "employee":employee
+    }
+    
+    return render(request , 'staff/employee_detail.html', context)
+# class Employee_DetailView(DetailView):
+#     model = Employee
+#     template_name_ = 'staff/employee_detail.html'
+#     context_object_name = "employee"
+#     fields = '__all__'
     
     
+#     def get_context_data(self, **kwargs):
+#         context =  super().get_context_data(**kwargs)
+#         context['employee'] = Employee.objects.filter(id=self.kwargs.get('pk'))
+#         return context
+        
+        
+    
+def team_detail(request , id):
+    return render(request, 'staff/team_detail.html' , {})
 # class DetailProfile(View):
 #     def is_stored_post(self, request, post_id):
 #         stored_posts = request.session.get("stored_posts")

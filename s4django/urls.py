@@ -13,11 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from json import tool
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+import debug_toolbar
+
 # The admin now has a sidebar on larger screens for easier navigation. It is enabled by default but can be disabled by using a custom AdminSite and setting AdminSite.enable_nav_sidebar to False.
 admin.autodiscover()
 admin.site.enable_nav_sidebar = False
@@ -25,5 +28,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('polls.urls')),
     path('employee/', include(('staff.urls', 'staff') , namespace='staff')),
+    path('__debug__/', include('debug_toolbar.urls'))
     
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# if settings.DEBUG: # make sure the toolbar is above ?CKeditor and FeinCMS
+#     import debug_toolbar
+#     urlpatterns += path('__debug__/', include(debug_toolbar.urls))
+    
+
+    

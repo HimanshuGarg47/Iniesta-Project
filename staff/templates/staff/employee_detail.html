@@ -11,7 +11,7 @@
 <div class="tab-content">
     <!-- About Tab -->
     <div role="tabpanel" class="tab-pane active" id="about">
-        <img src="{{ emp.image.url }}" alt="{{ emp.first_name }}" />
+        <img src="{{ employee.image.url }}" alt="{{ employee.first_name }}" />
 
         <div class="card pmd-card">
             <div class="card-body">
@@ -30,36 +30,37 @@
                     <div class="row view-basic-card">
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">First Name</label>
-                                <p class="pmd-list-title">Marie</p>
+                                <p class="pmd-list-title">{{ employee.first_name }}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Last Name</label>
-                                <p class="pmd-list-title">Meyer</p>
+                                <p class="pmd-list-title">{{ employee.last_name }}</p>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-3">
+                            {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Middle Name</label>
                                 <p class="pmd-list-title">Maynard</p>
-                            </div>
+                            </div> {% endcomment %}
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Phone</label>
-                                <p class="pmd-list-title"><a href="tel:+91 98250 98250" title="+91 98250 98250">+91 98250 98250</a></p>
+                                <p class="pmd-list-title"><a href="tel:+91 98250 98250" title="+91 98250 98250">{{ employee.phone }}</a></p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Personal Email</label>
-                                <p class="pmd-list-title"><a href="mailto:marie@gmail.com" title="marie@xyz.com">marie@gmail.com</a></p>
+                                <p class="pmd-list-title"><a href="mailto:{{ employee.email }}" title="marie@xyz.com">{{ employee.email }}</a></p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Date of Birth</label>
-                                <p class="pmd-list-title">16<sup>th</sup> June 1991</p>
+                                <p class="pmd-list-title">{{ employee.date_joined|date:"d M Y" }}</p>
+                                {% comment %} <p class="pmd-list-title">16<sup>th</sup> June 1991</p> {% endcomment %}
                             </div>
-                            <div class="col-12 col-md-6 col-lg-3">
+                            {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Gender</label>
                                 <p class="pmd-list-title">Female</p>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
+                            </div> {% endcomment %}
+                            {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Marital Status</label>
                                 <p class="pmd-list-title">Unmarried</p>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     <form class="edit-basic-card" style="display: none;">
                         <div class="row">
@@ -145,11 +146,11 @@
                     <div class="row view-employee-card">
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Employee Enrollment ID</label>
-                                <p class="pmd-list-title">XYZ - 1111</p>
+                                <p class="pmd-list-title">{{ employee.id }}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Date of Joining</label>
-                                <p class="pmd-list-title">16<sup>th</sup> July 2017</p>
+                                <p class="pmd-list-title">{{ employee.date_joined|date:"d M Y" }}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Company Email</label>
@@ -157,16 +158,16 @@
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Department</label>
-                                <p class="pmd-list-title">Design</p>
+                                <p class="pmd-list-title">{{ employee.department }}</p>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-3">
+                            {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Designation</label>
                                 <p class="pmd-list-title">UI / UX Designer</p>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
+                            </div> {% endcomment %}
+                            {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Reporting Employee</label>
                                 <p class="pmd-list-title">Darlene C. Larsen</p>
-                            </div>
+                            </div> {% endcomment %}
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Type of Employee</label>
                                 <p class="pmd-list-title">Full Time</p>
@@ -266,27 +267,27 @@
                     <div class="row view-contact-card">
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">Address Line 1</label>
-                            <p class="pmd-list-title">2654 Kooter Lane</p>
+                            <p class="pmd-list-title">{{ employee.address.address_line1 }}</p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">Address Line 2</label>
-                            <p class="pmd-list-title">Pieter Feddesstraat 90</p>
+                            <p class="pmd-list-title">{{ employee.address.address_line2 }}</p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">City</label>
-                            <p class="pmd-list-title">San Antonio</p>
+                            <p class="pmd-list-title">{{ employee.address.city }}</p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">State</label>
-                            <p class="pmd-list-title">Texas</p>
+                            <p class="pmd-list-title">{{ employee.address.state }}</p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">Zip Code</label>
-                            <p class="pmd-list-title">78209</p>
+                            <p class="pmd-list-title">{{ employee.address.zip_code }}</p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
                             <label class="pmd-list-subtitle">Country</label>
-                            <p class="pmd-list-title">United States</p>
+                            <p class="pmd-list-title">{{ employee.address.country }}</p>
                         </div>
                     </div>
                     <form class="edit-contact-card" style="display: none;">

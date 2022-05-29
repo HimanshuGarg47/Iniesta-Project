@@ -1,1 +1,55 @@
 {% extends "base.html" %}
+{% block title %}
+  My Projects
+{% endblock title %}
+
+{% block css_files %}
+  
+{% endblock css_files %}
+
+{% block body %}
+
+<!-- List of Assigned Projects -->
+<h2>Assigned Projects</h2>
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    {% for project in  projects %}
+    <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+        </div>
+        <h2>{{project.name}}</h2>
+        <p>{{project.detail}}</p>
+        <a href="#" class="icon-link">
+          In Detail
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+    {% endfor %}
+    
+
+</div>
+
+<!--  List of Not assigned projects -->
+{% if na_projects  %}
+  
+<h2>Not Assigned Projects</h2>
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    {% for project in  na_projects %}
+    <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+        </div>
+        <h2>{{project.name}}</h2>
+        <p>{{project.detail}}</p>
+        <a href="#" class="icon-link">
+          Assign Now
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+    {% endfor %}
+    
+
+</div>
+{% endif %}
+
+{% endblock body %}
