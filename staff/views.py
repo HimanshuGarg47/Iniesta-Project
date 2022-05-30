@@ -41,6 +41,16 @@ def employee_detail(request, id):
     }
     
     return render(request , 'staff/employee_detail.html', context)
+
+def project_assign(request , pk):  # pk => project id
+    ems = Employee.objects.all().filter(team__isnull = True)
+    print(ems)
+    context = {
+        "project_id":pk,
+        "ems":ems,            # ems=>employees 
+        
+    }
+    return render(request, 'staff/project-assign.html', context)
 # class Employee_DetailView(DetailView):
 #     model = Employee
 #     template_name_ = 'staff/employee_detail.html'

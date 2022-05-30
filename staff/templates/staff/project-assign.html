@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Assign a project
+{% endblock title %}
+
+{% block body %}
+
+<h2>
+
+    List of employees who has not yet assigned any work
+</h2>
+
+
+{% for em in ems %}
+<div class="">
+    <p>{{em.first_name}}</p>
+    <p>{{em.email}}</p>
+    <p>{{em.department.name}}</p>
+</div>
+ 
+{% endfor %}
+
+{% endblock body %}

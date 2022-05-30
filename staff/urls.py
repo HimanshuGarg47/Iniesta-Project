@@ -8,5 +8,6 @@ urlpatterns = [
   path('team/', views.team, name='team'), 
   path('team/<int:id>/', views.team_detail, name='team-detail'), 
   path('projects/', views.projects, name='projects'),
+  path('project-assign/<int:pk>',views.project_assign , name='project-assign')
   
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

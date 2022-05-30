@@ -41,7 +41,8 @@
         </div>
         <h2>{{project.name}}</h2>
         <p>{{project.detail}}</p>
-        <a href="#" class="icon-link">
+        {% url 'staff:project-assign' project.pk as the_url %}
+        <a href="{{ the_url }}" class="icon-link">
           Assign Now
           <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
         </a>
