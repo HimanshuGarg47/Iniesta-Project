@@ -1,0 +1,27 @@
+{% load static %}
+{% block content %}
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+<title> Sign Up </title>
+</head>
+<body>
+ {% csrf_token %}
+<!--    <div class="login-page">-->
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>SIGN UP</h3>
+            <p>Please Fill your Details:</p>
+          </div>
+        </div>
+        <form method="Post">
+          {% csrf_token %}
+          {{form}}
+          <button type="submit">Sign Up</button>
+        </form>
+        {% endblock content %}
+      </div>
+    </div>
+</body>
+</html>

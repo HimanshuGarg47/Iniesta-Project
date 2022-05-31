@@ -1,38 +1,15 @@
+{% extends "polls_base.html" %}
 {% load static %}
-<html>
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,intial-scale=1" >
-    <title>CAREER</title>
+	{% block title %}
+	  Career
+	{% endblock title %}
+    {% block css_files %}
+      
     <link rel="stylesheet" type="text/css" href="{% static 'css/career.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<div class="box">
-	</div>
-	<div class="rec1">
-		<div>
-			<a href="{% url 'index' %}" class="logo">Logo</a>
-		</div>
-		<div>
-			<a href="{% url 'about' %}" class="aboutus">About Us</a>
-		</div>
-		<div>
-			<a href="{% url 'service' %}" class="ourservices">Our Services</a>
-		</div>
-		<div>
-			<a href="{% url 'project' %}" class="projects">Projects</a>
-		</div>
-		<div>
-			<a href="{% url 'career' %}" class="career">Career</a>
-		</div>
-		<div>
-			<a href="{% url 'contact' %}" class="contact">Contact</a>
-		</div>
-		<div class="srec1">
-			<button onclick="Login" class="login">Login</button>
-		</div>
-	</div>
+    {% endblock css_files %}
+{% block body %}
+  
+
 	<div class="p1">
 		<text>IMAGINE,<font color="red"> DESIGN</font> AND<font color="red"> BUILD</font> NEW TOMORROW</text>
 	</div>
@@ -164,6 +141,4 @@
       </div>
      </text>
  </div>
-</body>
-</html>
-    
+ {% endblock body %}

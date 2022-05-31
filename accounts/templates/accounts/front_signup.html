@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="form">
+<h1> Want to SignUp as </h1>
+          {% csrf_token %}
+      <a href="{% url 'adminsignup' %}">
+            <button type="submit" name="admin" value="admin">Admin</button><br><br></a>
+         <a href="{% url 'empsignup' %}">
+             <button type="submit" name="employee" value="employee">Employee</button><br><br></a>
+    <a href="{% url 'internsignup' %}">
+        <button type="submit" name="intern" value="intern">Intern</button></a>
+
+    </form>
+
+</div>
+</body>
+</html>

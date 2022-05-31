@@ -27,7 +27,8 @@ admin.site.enable_nav_sidebar = False
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('polls.urls')),
-    path('employee/', include(('staff.urls', 'staff') , namespace='staff')),
+    path('staff/', include(('staff.urls', 'staff') , namespace='staff')),
+    path('user/', include('accounts.urls')),
     path('__debug__/', include('debug_toolbar.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \

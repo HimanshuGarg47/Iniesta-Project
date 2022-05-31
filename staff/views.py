@@ -1,7 +1,14 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 from  django.views.generic.edit import CreateView
-from .models import Employee , Team , Project 
+from django.contrib.auth import *
+from django.views.generic import *
+from .forms import *
+from datetime import datetime
+from accounts.models import *
+
+from .models import  Team , Project 
 # from django.views.generic.detail import DetailView
 
 # Create your views here.
@@ -51,6 +58,37 @@ def project_assign(request , pk):  # pk => project id
         
     }
     return render(request, 'staff/project-assign.html', context)
+
+
+
+
+
+def home_admin(request):
+    return render(request, "admin.html")
+
+
+def home_emp(request):
+    return render(request, "employee.html")
+
+
+def home_intern(request):
+    return render(request, "intern.html")
+
+
+def home(request):
+    if request.user.is_authenticated:
+
+        if request.user.is_superuser:
+            return redirect("/admin/")
+        elif request.user.is_admin:
+            return redirect("index")
+        elif request.user.is_employee:
+            return redirect("employee/")
+        elif request.user.is_intern:
+            return redirect("profilepage")
+
+    else:
+        return render(request, "polls/index.html")
 # class Employee_DetailView(DetailView):
 #     model = Employee
 #     template_name_ = 'staff/employee_detail.html'
@@ -67,6 +105,62 @@ def project_assign(request , pk):  # pk => project id
     
 def team_detail(request , id):
     return render(request, 'staff/team_detail.html' , {})
+
+
+def index(request):
+    employee = Employee.objects.all()
+    print(employee)
+    return render(request, 'admin.html', {'user': employee})
+
+
+def intern(request):
+    inters = Intern.objects.all()
+    print(inters)
+    return render(request, 'intern_admin.html', {'user': inters})
+
+
+def ourproject(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        assign = request.POST.get('assign')
+        projectour = Project(name=name, detail=description, assign_date =assign, due_date = datetime.today())
+        projectour.save()
+
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'our': projects})
+
+
+@login_required(login_url='/login/')
+def profilePage(request):
+    internship = Intern.objects.get(user=request.user)
+    return render(request, "intern.html", {"User": internship})
+
+
+@login_required(login_url='/login/')
+def updateprofile(request):
+    user = CustomUser.objects.get(username=request.user)
+    print(user)
+    if (user.is_superuser):
+        return redirect("/admin/")
+    else:
+        user_intern = Intern.objects.get(user=request.user)
+        print(user_intern)
+
+        if request.method == "POST":
+            user_intern.user.username = request.POST.get('username')
+            user_intern.user.email = request.POST.get('email')
+            user_intern.user.mobile_no = request.POST.get('phone')
+            user_intern.addressline = request.POST.get('addressline')
+            user_intern.pin = request.POST.get('pin')
+            user_intern.city = request.POST.get('city')
+            user_intern.state = request.POST.get('state')
+            if (request.FILES.get('pic')):
+                user_intern.pic = request.FILES.get('pic')
+            user_intern.save()
+            return redirect("profilepage/")
+
+    return render(request, "update_profile.html", {"User": user})
 # class DetailProfile(View):
 #     def is_stored_post(self, request, post_id):
 #         stored_posts = request.session.get("stored_posts")
