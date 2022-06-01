@@ -43,12 +43,12 @@
       </tbody>
    </table>
 
-<a href="{% url 'index' %}"style="margin-left:10px;color:red;"> Our Employee Details</a>
+<a href="{% url 'staff:index' %}"style="margin-left:10px;color:red;"> Our Employee Details</a>
    <div>
-     <a href="{% url 'ourproject' %}" style="margin-left:10px;color:red;"> Our Project </a>
+     <a href="{% url 'staff:ourproject' %}" style="margin-left:10px;color:red;"> Our Project </a>
    </div>
   <br><br>
-        <a href="{% url 'logout' %}" style="margin-left:10px;color:red;">
+        <a href="{% url 'staff:logout' %}" style="margin-left:10px;color:red;">
     <button type="submit">logout</button>
             </a>
     <!-- Optional JavaScript; choose one of the two! -->
@@ -70,12 +70,12 @@
               <h3>Looks like you are not logged in</h3>
           </div>
         </div>
-    <a href="{% url 'login' %}">
+    <a href="{% url 'staff:login' %}">
         <button class="btn btn-success">Login Here</button>
     </a>
           <br><br>
     <P>Create a new Account</P>
-    <a href="{% url 'signup' %}">
+    <a href="{% url 'accounts:signup' %}">
         <button class="btn btn-warning">Sign Up</button>
     </a>
       </div>
