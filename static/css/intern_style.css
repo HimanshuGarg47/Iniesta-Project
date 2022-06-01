@@ -1,0 +1,482 @@
+    .navwidth {
+      width: 130px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navwidthservice {
+      width: 150px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #003147;
+      font-weight: bold;
+    }
+
+    .login {
+      margin-left: 60px;
+      margin-right: 35px;
+    }
+
+    .m60 {
+      margin-left: 60px;
+    }
+
+    .fontcolor {
+      color: #003147;
+    }
+
+    .background {
+      background: #003147;
+    }
+
+    .content {
+      margin-top: 110px;
+    }
+
+    .content ul li {
+      color: #003147;
+      font-weight: bold;
+      width: 170px;
+      margin-left: 120px;
+    }
+
+    .content ul li a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #003147;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      position: absolute;
+      width: 650px;
+      height: 800px;
+      margin-top: 80px;
+      margin-left: 50%;
+      border: 2px solid rgb(210, 198, 198);
+    }
+
+    .fw {
+      font-weight: bold;
+    }
+
+    .sidebar button {
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 17px;
+      width: 160px;
+      height: 50px;
+    }
+
+    .fonts ul li a i {
+      font-size: 30px;
+      font-weight: bold;
+      color: gray;
+      margin: 10px;
+    }
+
+    .imgbar {
+      margin-left: 40px;
+    }
+
+    .topimg img {
+      border-radius: 20px;
+      margin-top: 60px;
+      width: 380px;
+      height: 230px;
+    }
+
+    .topimg1 img {
+      border-radius: 20px;
+      width: 380px;
+      height: 230px;
+    }
+
+    .rightimg img {
+      border-radius: 20px;
+      width: 380px;
+      height: 550px;
+      margin-top: 6px;
+      margin-left: 30px;
+    }
+
+    .dotted {
+      position: absolute;
+      margin-top: 390px;
+      margin-left: 610px;
+    }
+
+    .dotted1 {
+      position: absolute;
+      margin-top: 520px;
+      margin-left: 640px;
+    }
+
+    .vision {
+      margin-top: 40px;
+      font-size: 30px;
+      color: #003147;
+    }
+
+    .visionimg img {
+      position: absolute;
+      border-radius: 20px;
+      width: 300px;
+      height: 200px;
+      margin-top: 80px;
+      margin-left: 355px;
+    }
+
+    .visionimg1 img {
+      border-radius: 20px;
+      width: 300px;
+      height: 400px;
+      margin-top: 208px;
+      margin-left: 120px;
+    }
+
+    .vision1 img {
+      border-radius: 20px;
+      margin-top: 20px;
+      width: 350px;
+      height: 400px;
+    }
+
+    .vision2 img {
+      border-radius: 20px;
+      width: 350px;
+      height: 160px;
+    }
+
+    .board {
+      margin-top: 100px;
+    }
+
+    .card {
+      height: 370px;
+    }
+
+    .card h6 {
+      color: #003147;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+    }
+
+    .heading {
+      color: #003147;
+      margin-top: 20px;
+    }
+
+    .heading1 {
+      color: #003147;
+      margin-top: 5px;
+    }
+
+    .main {
+      margin-top: 60px;
+    }
+
+    .main a {
+      text-decoration: none;
+      color: #003147;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .main .btn {
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 13px;
+    }
+
+    .star {
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 730px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .vec1 {
+      position: absolute;
+      margin-left: 72.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec2 {
+      position: absolute;
+      margin-top: 50px;
+      margin-left: 72.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec3 {
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 72.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec4 {
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 68%;
+      width: 360px;
+      height: 100px;
+    }
+
+    .found {
+      margin-top: 100px;
+    }
+
+    .line {
+      position: absolute;
+      margin-top: 550px;
+      margin-left: 8px;
+      width: 1050px;
+      height: 105px;
+    }
+
+    .line1 {
+      position: absolute;
+      margin-top: 470px;
+      margin-left: 8px;
+      width: 1050px;
+      height: 105px;
+    }
+
+    .strline {
+      position: absolute;
+      margin-top: 670px;
+      margin-left: 8px;
+      width: 300px;
+    }
+
+    .seemore {
+      position: absolute;
+      margin-left: 130px;
+      margin-top: 35px;
+      border: 2px solid gray;
+      border-radius: 8px;
+      color: #003147;
+      font-weight: bold;
+      width: 130px;
+      height: 40px;
+      padding: 5px;
+      background: white;
+    }
+
+    .see {
+      position: absolute;
+      margin-top: 3px;
+      margin-left: 6px;
+    }
+
+    .more {
+      position: absolute;
+      margin-top: 8.5px;
+      margin-left: 15px;
+    }
+
+    .explore {
+      margin-top: 50px;
+    }
+
+    .explore .ex {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .explore .bord {
+      border: 1px solid gray;
+      width: 300px;
+      font-weight: bolder;
+      margin-left: 50px;
+      border-radius: 13px;
+    }
+
+    .hex {
+      position: absolute;
+      margin-top: 37px;
+      margin-left: 400px;
+      font-size: 45px;
+      color: gray;
+    }
+
+    .letter {
+      letter-spacing: 1px;
+    }
+
+    .imagine {
+      margin-top: 100px;
+    }
+
+    .project {
+      margin-top: 70px;
+    }
+
+    .visit {
+      width: 150px;
+      border-radius: 15px;
+      height: 40px;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .project1 {
+      background: rgb(227, 242, 247);
+    }
+
+    .project1 img {
+      margin-left: 50px;
+    }
+
+    .girl {
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 320px;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 360px;
+    }
+
+    .name {
+      margin-top: 30px;
+      margin-left: 110px;
+      font-size: 16px;
+    }
+
+    .name h5 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .st {
+      color: rgb(248, 237, 29);
+    }
+
+    .st1 {
+      color: rgb(188, 186, 186);
+    }
+
+    .vec13 {
+      position: absolute;
+      margin-left: 51.3%;
+      margin-top: 20px;
+      width: 400px;
+      height: 100px;
+    }
+
+    .vec5 {
+      position: absolute;
+      margin-top: 70px;
+      margin-left: 51.3%;
+      width: 400px;
+      height: 100px;
+    }
+
+    .vec6 {
+      position: absolute;
+      margin-top: 120px;
+      margin-left: 51.3%;
+      width: 400px;
+      height: 100px;
+    }
+
+    .vec7 {
+      position: absolute;
+      margin-top: 30px;
+      margin-left: 14.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec8 {
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 14.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec9 {
+      position: absolute;
+      margin-top: 130px;
+      margin-left: 14.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec10 {
+      position: absolute;
+      margin-left: 68.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec11 {
+      position: absolute;
+      margin-top: 50px;
+      margin-left: 68.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .vec12 {
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 68.6%;
+      width: 300px;
+      height: 100px;
+    }
+
+    .learn {
+      margin-left: 180px;
+    }
+
+    .cardfont {
+      font-size: 11px;
+    }
+
+    .round {
+      border-radius: 15px;
+    }
+
+    .arrows {
+      position: absolute;
+      margin-left: 76%;
+    }
+    .pdd{
+      padding:0px 50px 0px 50px;
+    }
+    .padding{
+      padding: 2px 40px 0px 40px;
+    }
+    .loginbar {
+      height: 470px;
+    }
+
+    @media screen and (max-width:991px) {
+      .sidebar {
+        position: relative;
+        width: 650px;
+        height: 700px;
+        margin-top: 80px;
+        margin-right: 100px;
+        margin-left: 100px;
+        border: 2px solid rgb(210, 198, 198);
+      }
+
+      .image {
+        width: 1010px;
+      }
+    }

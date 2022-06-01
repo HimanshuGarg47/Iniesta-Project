@@ -64,7 +64,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR,os.path.join('templates')
+            # BASE_DIR,os.path.join('templates'),
+             BASE_DIR / "templates",
+            "templates",
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -134,7 +136,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR ,'static')
+    os.path.join(BASE_DIR ,'static'),
+    BASE_DIR / "static",
+    
 ]
 STATIC_ROOT = os.path.join(BASE_DIR , 'assests')        #"/static/"
 
@@ -143,6 +147,8 @@ MEDIA_URL = "/files/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_REDIRECT_URL = "/account/"
-LOGOUT_REDIRECT_URL = "/account/login/"
+# LOGIN_REDIRECT_URL = "/staff/login"
+# LOGOUT_REDIRECT_URL = "/staff/logout/"
+LOGIN_REDIRECT_URL = "/staff"
+LOGOUT_REDIRECT_URL = "/staff/logout/"
 

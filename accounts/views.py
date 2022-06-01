@@ -8,13 +8,13 @@ from .models import *
 # Create your views here.
 
 def signUp(request):
-    return render(request, "front_signUp.html")
+    return render(request, "accounts/front_signUp.html")
 
 
 class AdminSignUpView(CreateView):
     model = CustomUser
     form_class = AdminSignUpForm
-    template_name = "registration/signup_form.html"
+    template_name = "accounts/signup_form.html"
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
@@ -32,7 +32,7 @@ class AdminSignUpView(CreateView):
 class EmployeeSignUpView(CreateView):
     model = CustomUser
     form_class = EmployeeSignUpForm
-    template_name = 'registration/signup_form.html'
+    template_name = 'accounts/signup_form.html'
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
@@ -47,7 +47,7 @@ class EmployeeSignUpView(CreateView):
 class InternSignUpView(CreateView):
     model = CustomUser
     form_class = InternSignUpForm
-    template_name = 'registration/signup_form.html'
+    template_name = 'accounts/signup_form.html'
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:

@@ -20,7 +20,7 @@
 <div class="tab-content">
     <!-- About Tab -->
     <div role="tabpanel" class="tab-pane active" id="about">
-        <img class="rounded rounded-circle my-3 d-block user" src="{{ employee.image.url }}" alt="{{ employee.first_name }}" />
+        <img class="rounded rounded-circle my-3 d-block user" width="150px"  height = "150px" src="{{ employee.image.url }}" alt="{{ employee.first_name }}" />
 
         <div class="card pmd-card">
             <div class="card-body">
@@ -39,11 +39,11 @@
                     <div class="row view-basic-card">
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">First Name</label>
-                                <p class="pmd-list-title">{{ employee.first_name }}</p>
+                                <p class="pmd-list-title">{{ employee.user.first_name }}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Last Name</label>
-                                <p class="pmd-list-title">{{ employee.last_name }}</p>
+                                <p class="pmd-list-title">{{ employee.user.last_name }}</p>
                             </div>
                             {% comment %} <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Middle Name</label>
@@ -51,11 +51,11 @@
                             </div> {% endcomment %}
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Phone</label>
-                                <p class="pmd-list-title"><a href="tel:+91 98250 98250" title="+91 98250 98250">{{ employee.phone }}</a></p>
+                                <p class="pmd-list-title"><a href="tel:+91 98250 98250" title="+91 98250 98250">{{ employee.user.mobile_no }}</a></p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Personal Email</label>
-                                <p class="pmd-list-title"><a href="mailto:{{ employee.email }}" title="marie@xyz.com">{{ employee.email }}</a></p>
+                                <p class="pmd-list-title"><a href="mailto:{{ employee.email }}" title="marie@xyz.com">{{ employee.user.email }}</a></p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Date of Birth</label>
@@ -155,7 +155,7 @@
                     <div class="row view-employee-card">
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Employee Enrollment ID</label>
-                                <p class="pmd-list-title">{{ employee.id }}</p>
+                                <p class="pmd-list-title">{{ employee.user.id }}</p>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <label class="pmd-list-subtitle">Date of Joining</label>

@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('polls.urls')),
     path('staff/', include(('staff.urls', 'staff') , namespace='staff')),
-    path('account/', include(('accounts.urls' , 'account') , namespace='account')),
+    path('account/', include(('accounts.urls' , 'accounts') , namespace='accounts')),
     path('__debug__/', include('debug_toolbar.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
