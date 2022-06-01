@@ -26,7 +26,7 @@ class Task(models.Model):
     assign_date = models.DateField(null=True)
     due_date = models.DateField(null=True)
     employee_assigned = models.ForeignKey(
-        'accounts.Employee', null=True, on_delete=models.SET_NULL)
+        'accounts.Employee', related_name='task_assigned' , null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
@@ -34,7 +34,7 @@ class Task(models.Model):
 
 class Team(models.Model):
     project = models.ForeignKey(
-        'Project', blank=True, null=True, on_delete=models.CASCADE)
+        'Project', related_name='project_team' , blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.id) + " assigned " + str(self.project.name)

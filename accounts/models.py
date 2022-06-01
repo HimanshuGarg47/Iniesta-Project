@@ -1,11 +1,11 @@
 from pyexpat import model
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.utils import timezone
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.translation import gettext as _
-from django.contrib.auth.models import AbstractUser, AbstractBaseUser
+from django.contrib.auth.models import AbstractUser
 from .managers import CustomAccountManager
 from staff.models import *
 
@@ -60,20 +60,20 @@ class CustomUser(AbstractUser):
         return self.username
 
 
-class Employee(AbstractUser):
+class Employee(models.Model):
     user = models.OneToOneField(
-        CustomUser, on_delete=models.CASCADE, primary_key=True)
+        CustomUser, related_name='employees', on_delete=models.CASCADE, primary_key=True)
     image = models.ImageField(upload_to="profile", null=True)
 
     date_joined = models.DateTimeField(default=timezone.now)
     # (choices=department_choices, default=0)
     department = models.ForeignKey(
-        Department, blank=True, default=None, null=True, on_delete=models.SET_NULL)
+        Department, related_name='departments', blank=True, default=None, null=True, on_delete=models.SET_NULL)
     credit_score = models.IntegerField(validators=[MinValueValidator(0),
                                                    MaxValueValidator(100)], default=0)
-    address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True)
+    address = models.ForeignKey(Address, related_name='addresses' , on_delete=models.SET_NULL, null=True)
     team = models.ForeignKey(
-        'staff.Team', blank=True, null=True, on_delete=models.SET_NULL)
+        'staff.Team', related_name = 'teams', blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.user.username
@@ -81,7 +81,7 @@ class Employee(AbstractUser):
 
 class Intern(models.Model):
     user = models.OneToOneField(
-        CustomUser, on_delete=models.CASCADE, primary_key=True)
+        CustomUser, related_name = 'interns' , on_delete=models.CASCADE, primary_key=True)
 
     image = models.ImageField(upload_to="profile", null=True)
 

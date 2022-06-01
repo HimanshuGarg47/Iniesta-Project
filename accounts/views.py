@@ -18,7 +18,7 @@ class AdminSignUpView(CreateView):
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect("/user/")
+            return redirect("/account/")
         return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
@@ -27,7 +27,7 @@ class AdminSignUpView(CreateView):
         password = form.cleaned_data.get("password1")
         new_user = authenticate(self.request, username=username, password=password)
         login(self.request, new_user)
-        return redirect("/user/")
+        return redirect("/account/")
     
 class EmployeeSignUpView(CreateView):
     model = CustomUser
@@ -51,10 +51,10 @@ class InternSignUpView(CreateView):
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect("/user/")
+            return redirect("/account/")
         return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        return redirect("/user/")
+        return redirect("/account/")

@@ -81,11 +81,11 @@ def home(request):
         if request.user.is_superuser:
             return redirect("/admin/")
         elif request.user.is_admin:
-            return redirect("index")
+            return redirect("index/")
         elif request.user.is_employee:
             return redirect("employee/")
         elif request.user.is_intern:
-            return redirect("profilepage")
+            return redirect("profilepage/")
 
     else:
         return render(request, "polls/index.html")
