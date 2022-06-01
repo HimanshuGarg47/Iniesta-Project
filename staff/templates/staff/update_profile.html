@@ -15,8 +15,8 @@
 <div class="container-fluid mt-3" style="height: 150vh;">
     <div class="row">
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            {% if User.pic %}
-            <img src="{{User.pic.url}}" class="w-100" style="height: 872px;">
+            {% if User.image %}
+            <img src="{{ User.image.url }}" class="w-100" style="height: 600px;">
             {% else %}
             <img src="{% static 'images\noimage.jpg' %}" class="w-100" height="872px">
             {% endif %}
@@ -37,7 +37,7 @@
 <!--                </div>-->
                 <div class="mb-2">
                     <label for="username" class="form-label">User Name</label>
-                    <input type="text" class="form-control" name="username" placeholder="Enter Your username "
+                    <input type="text" class="form-control" name="username" placeholder="Enter your Name"
                         value="{{User.user.username}}">
                 </div>
                 <div class="mb-2">
@@ -53,22 +53,22 @@
                 <div class="mb-2">
                     <label for="addressline" class="form-label">Address Line 1</label>
                     <input type="text" class="form-control" name="addressline" placeholder="Enter House Number"
-                        value="{{User.addressline}}">
+                        value="{{User.address.address_line1}}">
                 </div>
                 <div class="mb-2">
                     <label for="city" class="form-label">City</label>
                     <input type="text" class="form-control" name="city" placeholder="Enter Your City Name"
-                        value="{{User.city}}">
+                        value="{{User.address.city}}">
                 </div>
                 <div class="mb-2">
                     <label for="state" class="form-label">State</label>
                     <input type="text" class="form-control" name="state" placeholder="Enter Your State Name "
-                        value="{{User.state}}">
+                        value="{{User.address.state}}">
                 </div>
                 <div class="mb-2">
                     <label for="pin" class="form-label">Pin Code</label>
                     <input type="text" class="form-control" name="pin" placeholder="Enter Your pin code"
-                        value="{{User.pin}}">
+                        value="{{ User.address.zip_code }}">
                 </div>
                 <div class="mb-2">
                     <label for="pic" class="form-label">Profile pic</label>

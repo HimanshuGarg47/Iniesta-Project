@@ -27,8 +27,8 @@ class AdminSignUpView(CreateView):
         password = form.cleaned_data.get("password1")
         new_user = authenticate(self.request, username=username, password=password)
         login(self.request, new_user)
-        return redirect("/account/")
-    
+        return redirect("/staff/admin")
+        
 class EmployeeSignUpView(CreateView):
     model = CustomUser
     form_class = EmployeeSignUpForm

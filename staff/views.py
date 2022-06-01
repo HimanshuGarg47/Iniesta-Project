@@ -107,6 +107,7 @@ def home_intern(request):
 @login_required(login_url='/login/')
 def profilePage(request):
     internship = Intern.objects.get(user=request.user)
+    print(internship.image.url)
     return render(request, "staff/intern.html", {"User": internship})
 
 # class Employee_DetailView(DetailView):
@@ -163,13 +164,24 @@ def updateprofile(request):
             user_intern.user.username = request.POST.get('username')
             user_intern.user.email = request.POST.get('email')
             user_intern.user.mobile_no = request.POST.get('phone')
-            user_intern.addressline = request.POST.get('addressline')
-            user_intern.pin = request.POST.get('pin')
+            user_intern.address_line1 = request.POST.get('addressline')
+            user_intern.zip_code = request.POST.get('pin')
             user_intern.city = request.POST.get('city')
             user_intern.state = request.POST.get('state')
             if (request.FILES.get('pic')):
-                user_intern.pic = request.FILES.get('pic')
-            user_intern.save()
-            return redirect("profilepage/")
+                user_intern.image = request.FILES.get('pic')
+            # user_intern.save()
+            try:
+               user_intern.save()
+               print("success")
+            except:
+                print("Error in updating")
+       # raise exception or error message
+            # messages.success(request, 'Changes saved!')
 
-    return render(request, "staff/update_profile.html", {"User": user})
+            return redirect("profilepage/")
+        else:
+            return render(request, "staff/update_profile.html", {"User": user_intern})
+        
+        
+    # return render(request, "staff/update_profile.html", {"User": user})
