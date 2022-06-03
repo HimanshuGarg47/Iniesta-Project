@@ -261,7 +261,7 @@
 	width: 650px;
 	height: 180px;
 	left: 100px;
-	top: 1200px;
+	top: 1147px;
 	font-family: 'Poppins;';
 	font-style: normal;
 	font-weight: 500;
@@ -273,7 +273,7 @@
 	position: absolute;
 	height: 180px;
 	left: 100px;
-	top: 1280px;
+	top: 1232px;
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 400;
@@ -286,7 +286,7 @@
 	width: 650px;
 	height: 180px;
 	left: 100px;
-	top: 1550px;
+	top: 1719px;
 	font-family: 'Poppins;';
 	font-style: normal;
 	font-weight: 500;
@@ -298,7 +298,7 @@
 	position: absolute;
 	width: 1300px;
 	left: 25px;
-	top: 1700px;
+	top: 1800px;
 }
 
 .rec5{
@@ -306,7 +306,7 @@
 	width: 380px;
 	height: 750px;
 	left: 200px;
-	top: 2100px;
+	top: 2105px;
 	background: #264360;
 	border-radius: 18px;
 }
@@ -329,7 +329,7 @@
 	width: 380px;
 	height: 750px;
 	left: 550px;
-	top: 2120px;
+	top: 2125px;
 	background: red;
 	border-radius: 18px;
 }
@@ -338,7 +338,7 @@
 	width: 380px;
 	height: 750px;
 	left: 900px;
-	top: 2140px;
+	top: 2145px;
 	background: blue;
 	border-radius: 18px;
 }
